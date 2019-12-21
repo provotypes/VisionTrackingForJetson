@@ -1,0 +1,6 @@
+cmake_minimum_required( VERSION 2.4 )
+project( VisionTracking )
+find_package( OpenCV REQUIRED )
+include_directories( ${PROJECT_SOURCE_DIR} )
+add_executable( RunVisionTracking NetSend.cpp main.cpp )
+target_link_libraries( RunVisionTracking ${OpenCV_LIBS} )
